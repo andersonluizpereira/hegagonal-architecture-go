@@ -47,7 +47,7 @@ func (p *Product) IsValid() (bool, error) {
 
 	_, err := govalidator.ValidateStruct(p)
 	if err != nil {
-		return false, err
+		return false, errors.New("Struct format invalid")
 	}
 
 	return true, nil

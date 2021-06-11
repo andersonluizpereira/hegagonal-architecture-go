@@ -149,3 +149,20 @@ func TestProduct_InvalidStruct(t *testing.T) {
 	require.Equal(t, "ID: 123 does not validate as uuidv4",err.Error())
 	require.Equal(t, false, hasValidStruct)
 }
+
+func TestProduct_NewProductErrorNoPrice(t *testing.T) {
+	product := application.NewProduct()
+	err := product.Enable()
+	require.Equal(t, "the price must ben greater than zero to enable the product",err.Error())
+	newId := product.GetID()
+	require.Equal(t, product.ID, newId)
+}
+
+func TestProduct_NewProduct(t *testing.T) {
+	product := application.NewProduct()
+	product.Price = float64(100)
+	err := product.Enable()
+	require.Nil(t, err)
+	newId := product.GetID()
+	require.Equal(t, product.ID, newId)
+}

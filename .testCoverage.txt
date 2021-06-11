@@ -1,0 +1,25 @@
+mode: set
+github.com/acpereira/go-hexagonal/application/product.go:9.13,11.2 1 1
+github.com/acpereira/go-hexagonal/application/product.go:55.28,61.2 2 1
+github.com/acpereira/go-hexagonal/application/product.go:63.43,65.20 1 1
+github.com/acpereira/go-hexagonal/application/product.go:69.2,69.49 1 1
+github.com/acpereira/go-hexagonal/application/product.go:73.2,73.17 1 1
+github.com/acpereira/go-hexagonal/application/product.go:77.2,78.16 2 1
+github.com/acpereira/go-hexagonal/application/product.go:82.2,82.18 1 1
+github.com/acpereira/go-hexagonal/application/product.go:65.20,67.3 1 1
+github.com/acpereira/go-hexagonal/application/product.go:69.49,71.3 1 1
+github.com/acpereira/go-hexagonal/application/product.go:73.17,75.3 1 1
+github.com/acpereira/go-hexagonal/application/product.go:78.16,80.3 1 1
+github.com/acpereira/go-hexagonal/application/product.go:85.32,86.17 1 1
+github.com/acpereira/go-hexagonal/application/product.go:90.2,90.81 1 1
+github.com/acpereira/go-hexagonal/application/product.go:86.17,89.3 2 1
+github.com/acpereira/go-hexagonal/application/product.go:93.34,94.18 1 1
+github.com/acpereira/go-hexagonal/application/product.go:98.2,98.83 1 1
+github.com/acpereira/go-hexagonal/application/product.go:94.18,97.3 2 1
+github.com/acpereira/go-hexagonal/application/product.go:101.32,103.2 1 1
+github.com/acpereira/go-hexagonal/application/product.go:105.34,107.2 1 1
+github.com/acpereira/go-hexagonal/application/product.go:109.36,111.2 1 1
+github.com/acpereira/go-hexagonal/application/product.go:113.36,115.2 1 1
+github.com/acpereira/go-hexagonal/application/product_service.go:7.65,9.16 2 1
+github.com/acpereira/go-hexagonal/application/product_service.go:12.2,12.21 1 1
+github.com/acpereira/go-hexagonal/application/product_service.go:9.16,11.3 1 1

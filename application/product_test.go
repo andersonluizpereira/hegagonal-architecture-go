@@ -145,6 +145,7 @@ func TestProduct_InvalidStruct(t *testing.T) {
 		Status: "",
 		Price: 10,
 	}
-	_, err := product.IsValid()
-	require.Equal(t, "Struct format invalid",err.Error())
+	hasValidStruct, err := product.IsValid()
+	require.Equal(t, "ID: 123 does not validate as uuidv4",err.Error())
+	require.Equal(t, false, hasValidStruct)
 }

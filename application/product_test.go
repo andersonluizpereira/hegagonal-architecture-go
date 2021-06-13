@@ -20,7 +20,7 @@ func TestProduct_Enable(t *testing.T) {
 
 	product.Price = 0
 	err = product.Enable()
-	require.Equal(t, "the price must ben greater than zero to enable the product", err.Error())
+	require.Equal(t, "the price must be greater than zero to enable the product", err.Error())
 }
 
 func TestProduct_Disabled(t *testing.T) {
@@ -30,11 +30,11 @@ func TestProduct_Disabled(t *testing.T) {
 		Price: 0,
 	}
 
-	err := product.Disabled()
+	err := product.Disable()
 	require.Nil(t, err)
 
 	product.Price = 10
-	err = product.Disabled()
+	err = product.Disable()
 	require.Equal(t, "the price must be zero in order to have the product disabled", err.Error())
 }
 
@@ -50,7 +50,7 @@ func TestProduct_IsValid(t *testing.T) {
 
 	product.Status = "INVALID"
 	_, err = product.IsValid()
-	require.Equal(t, "The status must enable or disabled", err.Error())
+	require.Equal(t, "the status must be enabled or disabled", err.Error())
 
 	product.Status = application.ENABLED
 	_, err = product.IsValid()
@@ -58,7 +58,7 @@ func TestProduct_IsValid(t *testing.T) {
 
 	product.Price = -10
 	_, err = product.IsValid()
-	require.Equal(t, "The price must be greater or equal zero", err.Error())
+	require.Equal(t, "the price must be greater or equal zero", err.Error())
 }
 
 func TestProduct_GetID(t *testing.T) {
@@ -117,7 +117,7 @@ func TestProduct_GetStatusDisabled(t *testing.T) {
 		Status: Status,
 		Price: 0,
 	}
-	product.Disabled()
+	product.Disable()
 	getStatusEnable := product.GetStatus()
 	require.Equal(t, application.DISABLED, getStatusEnable)
 
@@ -153,7 +153,7 @@ func TestProduct_InvalidStruct(t *testing.T) {
 func TestProduct_NewProductErrorNoPrice(t *testing.T) {
 	product := application.NewProduct()
 	err := product.Enable()
-	require.Equal(t, "the price must ben greater than zero to enable the product",err.Error())
+	require.Equal(t, "the price must be greater than zero to enable the product",err.Error())
 	newId := product.GetID()
 	require.Equal(t, product.ID, newId)
 }

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+  <testsuite name="github.com/acpereira/go-hexagonal/application" tests="13" errors="0" failures="0" skip="0">
+    <testcase classname="github.com/acpereira/go-hexagonal/application" name="TestProductService_Get" time="0.00">
+
+    </testcase>
+    <testcase classname="github.com/acpereira/go-hexagonal/application" name="TestProductService_Get_Error" time="0.00">
+
+    </testcase>
+    <testcase classname="github.com/acpereira/go-hexagonal/application" name="TestProduct_Enable" time="0.00">
+
+    </testcase>
+    <testcase classname="github.com/acpereira/go-hexagonal/application" name="TestProduct_Disabled" time="0.00">
+
+    </testcase>
+    <testcase classname="github.com/acpereira/go-hexagonal/application" name="TestProduct_IsValid" time="0.00">
+
+    </testcase>
+    <testcase classname="github.com/acpereira/go-hexagonal/application" name="TestProduct_GetID" time="0.00">
+
+    </testcase>
+    <testcase classname="github.com/acpereira/go-hexagonal/application" name="TestProduct_GetName" time="0.00">
+
+    </testcase>
+    <testcase classname="github.com/acpereira/go-hexagonal/application" name="TestProduct_GetStatusEnable" time="0.00">
+
+    </testcase>
+    <testcase classname="github.com/acpereira/go-hexagonal/application" name="TestProduct_GetStatusDisabled" time="0.00">
+
+    </testcase>
+    <testcase classname="github.com/acpereira/go-hexagonal/application" name="TestProduct_GetPrice" time="0.00">
+
+    </testcase>
+    <testcase classname="github.com/acpereira/go-hexagonal/application" name="TestProduct_InvalidStruct" time="0.00">
+
+    </testcase>
+    <testcase classname="github.com/acpereira/go-hexagonal/application" name="TestProduct_NewProductErrorNoPrice" time="0.00">
+
+    </testcase>
+    <testcase classname="github.com/acpereira/go-hexagonal/application" name="TestProduct_NewProduct" time="0.00">
+
+    </testcase>
+  </testsuite>

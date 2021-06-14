@@ -38,3 +38,9 @@ github.com/acpereira/go-hexagonal/application/product_service.go:47.2,48.16 2 1
 github.com/acpereira/go-hexagonal/application/product_service.go:51.2,51.20 1 1
 github.com/acpereira/go-hexagonal/application/product_service.go:44.16,46.3 1 1
 github.com/acpereira/go-hexagonal/application/product_service.go:48.16,50.3 1 1
+github.com/acpereira/go-hexagonal/adapters/db/product.go:13.41,15.2 1 1
+github.com/acpereira/go-hexagonal/adapters/db/product.go:17.75,20.16 3 1
+github.com/acpereira/go-hexagonal/adapters/db/product.go:23.2,24.16 2 1
+github.com/acpereira/go-hexagonal/adapters/db/product.go:27.2,27.22 1 1
+github.com/acpereira/go-hexagonal/adapters/db/product.go:20.16,22.3 1 0
+github.com/acpereira/go-hexagonal/adapters/db/product.go:24.16,26.3 1 0

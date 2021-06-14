@@ -49,3 +49,11 @@ func TestProductDb_Get(t *testing.T) {
 	require.Equal(t, 0.0, product.GetPrice())
 	require.Equal(t, "disabled", product.GetStatus())
 }
+
+func TestProductDb_Get_Error_Smt(t *testing.T) {
+	setUp()
+	defer Db.Close()
+	productDb := db.NewProductDb(Db)
+	_, err := productDb.Get("-1")
+	require.Equal(t, "sql: no rows in result set", err.Error())
+}

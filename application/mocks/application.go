@@ -139,6 +139,14 @@ type MockProductServiceInterface struct {
 	recorder *MockProductServiceInterfaceMockRecorder
 }
 
+func (m *MockProductServiceInterface) Disable(product application.ProductInterface) (application.ProductInterface, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "Disabled", product)
+	ret0, _ := ret[0].(application.ProductInterface)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
 // MockProductServiceInterfaceMockRecorder is the mock recorder for MockProductServiceInterface.
 type MockProductServiceInterfaceMockRecorder struct {
 	mock *MockProductServiceInterface

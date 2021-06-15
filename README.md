@@ -18,3 +18,6 @@ cobra init  --pkg-name=github.com/acpereira/go-hexagonal
 go run main.go cli -a=create -n="Product CLI" -p=25.98
 #get product
 go run main.go cli -a=get --id 16e6d891-bd3e-4f2f-9c55-5f45fb620cf2
+
+#Running web server cobra
+go run main.go http

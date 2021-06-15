@@ -80,3 +80,27 @@ func TestProductDb_Save(t *testing.T) {
 	require.Equal(t, product.Status, productResult.GetStatus())
 
 }
+
+func TestProductDb_SaveError(t *testing.T) {
+	setUp()
+	defer Db.Close()
+	productDb := db.NewProductDb(Db)
+
+	product := application.NewProduct()
+	product.Name = "Product Test"
+	product.Price = -1
+
+	productResult, err := productDb.Save(product)
+	require.Nil(t, err)
+	require.Equal(t, product.Name, productResult.GetName())
+	require.Equal(t, product.Price, productResult.GetPrice())
+	require.Equal(t, product.Status, productResult.GetStatus())
+	product.Status = "enabled"
+	product.ID = "123"
+	productResult, err = productDb.Save(product)
+	require.Nil(t, err)
+	require.Equal(t, product.Name, productResult.GetName())
+	require.Equal(t, product.Price, productResult.GetPrice())
+	require.Equal(t, product.Status, productResult.GetStatus())
+
+}

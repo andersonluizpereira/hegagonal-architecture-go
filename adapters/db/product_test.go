@@ -3,6 +3,7 @@ package db_test
 import (
 	"database/sql"
 	"github.com/acpereira/go-hexagonal/adapters/db"
+	"github.com/acpereira/go-hexagonal/application"
 	"github.com/stretchr/testify/require"
 	"log"
 	"testing"
@@ -49,11 +50,33 @@ func TestProductDb_Get(t *testing.T) {
 	require.Equal(t, 0.0, product.GetPrice())
 	require.Equal(t, "disabled", product.GetStatus())
 }
-
 func TestProductDb_Get_Error_Smt(t *testing.T) {
 	setUp()
 	defer Db.Close()
 	productDb := db.NewProductDb(Db)
 	_, err := productDb.Get("-1")
 	require.Equal(t, "sql: no rows in result set", err.Error())
+}
+
+func TestProductDb_Save(t *testing.T) {
+	setUp()
+	defer Db.Close()
+	productDb := db.NewProductDb(Db)
+
+	product := application.NewProduct()
+	product.Name = "Product Test"
+	product.Price = 25
+
+	productResult, err := productDb.Save(product)
+	require.Nil(t, err)
+	require.Equal(t, product.Name, productResult.GetName())
+	require.Equal(t, product.Price, productResult.GetPrice())
+	require.Equal(t, product.Status, productResult.GetStatus())
+	product.Status = "enabled"
+	productResult, err = productDb.Save(product)
+	require.Nil(t, err)
+	require.Equal(t, product.Name, productResult.GetName())
+	require.Equal(t, product.Price, productResult.GetPrice())
+	require.Equal(t, product.Status, productResult.GetStatus())
+
 }
